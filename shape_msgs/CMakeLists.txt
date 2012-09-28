@@ -1,14 +1,14 @@
+cmake_minimum_required(VERSION 2.8)
 project(shape_msgs)
-
-catkin_project(shape_msgs
-  INCLUDE_DIRS include
-)
+find_package(catkin REQUIRED COMPONENTS geometry_msgs std_msgs)
+catkin_package()
 
 add_message_files(
   DIRECTORY msg
-  FILES SolidPrimitive.msg Plane.msg Mesh.msg MeshTriangle.msg
-  )
+  FILES
+  Mesh.msg
+  MeshTriangle.msg
+  Plane.msg
+  SolidPrimitive.msg)
 
-find_package(geometry_msgs)
-generate_messages(DEPENDENCIES std_msgs geometry_msgs)
-
+generate_messages(DEPENDENCIES geometry_msgs std_msgs)

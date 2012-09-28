@@ -1,7 +1,7 @@
-<stack>
+<package>
   <name>common_msgs</name>
-  <version>1.9.2</version>
-  <description brief="common messages">
+  <version>1.9.3</version>
+  <description>
     common_msgs contains messages that are widely used by other ROS packages.
     These includes messages for
     actions (<a href="http://ros.org/wiki/actionlib_msgs">actionlib_msgs</a>),
@@ -10,20 +10,22 @@
     robot navigation (<a href="http://ros.org/wiki/nav_msgs">nav_msgs</a>),
     and common sensors (<a href="http://ros.org/wiki/sensor_msgs">sensor_msgs</a>), such as laser range finders, cameras, point clouds.
   </description>
-  <author>ROS community process</author>
   <maintainer email="tfoote@willowgarage.com">Tully Foote</maintainer>
   <license>BSD</license>
-  <copyright>Willow Garage</copyright>
+
   <url>http://www.ros.org/wiki/common_msgs</url>
-  <review status="doc reviewed" notes="2009/09/30"/>
 
-  <build_depends>boost</build_depends>
-  <build_depends>catkin</build_depends>
-  <build_depends>genmsg</build_depends>
-  <build_depends>langs-dev</build_depends>
-  <build_depends>std_msgs</build_depends>
+  <run_depend>actionlib_msgs</run_depend>
+  <run_depend>diagnostics_msgs</run_depend>
+  <run_depend>geometry_msgs</run_depend>
+  <run_depend>nav_msgs</run_depend>
+  <run_depend>sensor_msgs</run_depend>
+  <run_depend>shape_msgs</run_depend>
+  <run_depend>stereo_msgs</run_depend>
+  <run_depend>trajectory_msgs</run_depend>
+  <run_depend>visualization_msgs</run_depend>
 
-  <depends>boost</depends>
-  <depends>langs</depends>
-  <depends>std_msgs</depends>
-</stack>
+  <export>
+    <metapackage/>
+  </export>
+</package>
