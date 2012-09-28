@@ -1,0 +1,24 @@
+Source: ros-fuerte-common-msgs
+Section: misc
+Priority: extra
+Maintainer: Tully Foote <tfoote@willowgarage.com>
+Build-Depends: debhelper (>= 7.0.50~), ros-fuerte-catkin,ros-fuerte-langs-dev,ros-fuerte-std-msgs,libboost1.40-all-dev,ros-fuerte-genmsg
+Homepage: http://www.ros.org/wiki/common_msgs
+Standards-Version: 3.9.2
+
+Package: ros-fuerte-common-msgs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-fuerte-std-msgs,libboost1.40-all-dev,ros-fuerte-langs
+Description: common_msgs contains messages that are widely used by other ROS packages. These includes messages for actions (actionlib_msgs), diagnostics (diagnostic_msgs), geometric primitives (geometry_msgs), robot navigation (nav_msgs), and common sensors (sensor_msgs), such as laser range finders, cameras, point clouds.
+ .
+ This stack contains the packages:
+ * nav_msgs: nav_msgs defines the common messages used to interact with the navigation stack.
+ * shape_msgs: shape_msgs
+ * stereo_msgs: stereo_msgs contains messages specific to stereo processing, such as disparity images.
+ * actionlib_msgs: actionlib_msgs defines the common messages to interact with an action server and an action client. For full documentation of the actionlib API see the actionlib package.
+ * trajectory_msgs: trajectory_msgs
+ * sensor_msgs: This package defines messages for commonly used sensors, including cameras and scanning laser rangefinders.
+ * geometry_msgs: geometry_msgs provides messages for common geometric primatives such as points, vectors, and poses. These primatives are designed to provide a common data type and facilitate interoperability throughout the system.
+ * visualization_msgs: visualization_msgs is a set of messages used by higher level packages, such as rviz, that deal in visualization-specific data. The main messages in visualization_msgs is visualization_msgs/Marker. The marker message is used to send visualization &quot;markers&quot; such as boxes, spheres, arrows, lines, etc. to a visualization environment such as rviz. See the rviz tutorial rviz tutorials for more information.
+ * diagnostic_msgs: This package holds the diagnostic messages which provide the standardized interface for the diagnostic and runtime monitoring systems in ROS. These messages are currently used by the diagnostics Stack, which provides libraries for simple ways to set and access the messages, as well as automated ways to process the diagnostic data. These messages are used for long term logging and will not be changed unless there is a very important reason.
+
