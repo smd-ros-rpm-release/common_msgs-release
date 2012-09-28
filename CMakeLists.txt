@@ -1,21 +1,18 @@
 cmake_minimum_required(VERSION 2.8)
-project(common_msgs)
-
+project(diagnostic_msgs)
 find_package(catkin REQUIRED COMPONENTS genmsg std_msgs)
+catkin_package()
 
-catkin_stack()
+add_message_files(
+  DIRECTORY msg
+  FILES
+  DiagnosticArray.msg
+  DiagnosticStatus.msg
+  KeyValue.msg)
 
-foreach(subdir
-    geometry_msgs
-    sensor_msgs
-    nav_msgs
-    actionlib_msgs
-    visualization_msgs
-    stereo_msgs
-    diagnostic_msgs
-    trajectory_msgs
-    shape_msgs
-    )
+add_service_files(
+  DIRECTORY srv
+  FILES
+  SelfTest.srv)
 
-  add_subdirectory(${subdir})
-endforeach()
+generate_messages(DEPENDENCIES std_msgs)
