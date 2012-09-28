@@ -2,13 +2,13 @@ Source: ros-fuerte-common-msgs
 Section: misc
 Priority: extra
 Maintainer: Tully Foote <tfoote@willowgarage.com>
-Build-Depends: debhelper (>= 7.0.50~), ros-fuerte-catkin,ros-fuerte-langs-dev,ros-fuerte-std-msgs,libboost1.40-all-dev,ros-fuerte-genmsg
+Build-Depends: debhelper (>= 7.0.50~), ros-fuerte-catkin,libboost1.46-all-dev,ros-fuerte-std-msgs,ros-fuerte-langs-dev,ros-fuerte-genmsg
 Homepage: http://www.ros.org/wiki/common_msgs
 Standards-Version: 3.9.2
 
 Package: ros-fuerte-common-msgs
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, ros-fuerte-std-msgs,libboost1.40-all-dev,ros-fuerte-langs
+Depends: ${shlibs:Depends}, ${misc:Depends}, libboost1.46-all-dev,ros-fuerte-std-msgs,ros-fuerte-langs
 Description: common_msgs contains messages that are widely used by other ROS packages. These includes messages for actions (actionlib_msgs), diagnostics (diagnostic_msgs), geometric primitives (geometry_msgs), robot navigation (nav_msgs), and common sensors (sensor_msgs), such as laser range finders, cameras, point clouds.
  .
  This stack contains the packages:
