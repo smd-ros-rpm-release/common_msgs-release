@@ -1,21 +1,21 @@
 cmake_minimum_required(VERSION 2.8)
-project(common_msgs)
+project(nav_msgs)
+find_package(catkin REQUIRED COMPONENTS genmsg geometry_msgs std_msgs)
+catkin_package()
 
-find_package(catkin REQUIRED COMPONENTS genmsg std_msgs)
+add_message_files(
+  DIRECTORY msg
+  FILES
+  GridCells.msg
+  MapMetaData.msg
+  OccupancyGrid.msg
+  Odometry.msg
+  Path.msg)
 
-catkin_stack()
+add_service_files(
+  DIRECTORY srv
+  FILES
+  GetMap.srv
+  GetPlan.srv)
 
-foreach(subdir
-    geometry_msgs
-    sensor_msgs
-    nav_msgs
-    actionlib_msgs
-    visualization_msgs
-    stereo_msgs
-    diagnostic_msgs
-    trajectory_msgs
-    shape_msgs
-    )
-
-  add_subdirectory(${subdir})
-endforeach()
+generate_messages(DEPENDENCIES geometry_msgs std_msgs)
