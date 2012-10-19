@@ -1,0 +1,12 @@
+Source: nav-msgs
+Section: misc
+Priority: extra
+Maintainer: Tully Foote <tfoote@willowgarage.com>
+Build-Depends: debhelper (>= 7.0.50~), ros-groovy-std-msgs,ros-groovy-geometry-msgs,ros-groovy-genmsg,ros-groovy-langs-dev,ros-groovy-catkin
+Homepage: http://ros.org/wiki/nav_msgs
+Standards-Version: 3.9.2
+
+Package: nav-msgs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-groovy-geometry-msgs,ros-groovy-langs,ros-groovy-std-msgs
+Description: nav_msgs defines the common messages used to interact with the navigation stack.
