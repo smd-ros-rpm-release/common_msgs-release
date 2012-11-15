@@ -3,11 +3,13 @@ find_package(catkin REQUIRED COMPONENTS genmsg)
 
 include(CMakeParseArguments)
 
-if (@BUILDSPACE@)
-  find_program_required(GENACTION_BIN genaction.py PATHS @CMAKE_CURRENT_SOURCE_DIR@/scripts NO_DEFAULT_PATH)
-else()
-  find_program_required(GENACTION_BIN genaction.py PATHS @CMAKE_INSTALL_PREFIX@/lib/@PROJECT_NAME@ NO_DEFAULT_PATH)
-endif()
+@[if DEVELSPACE]@
+# find program in develspace
+find_program_required(GENACTION_BIN genaction.py PATHS @(CMAKE_CURRENT_SOURCE_DIR)/scripts NO_DEFAULT_PATH)
+@[else]@
+# find program in installspace
+find_program_required(GENACTION_BIN genaction.py PATHS @(CMAKE_INSTALL_PREFIX)/lib/@(PROJECT_NAME) NO_DEFAULT_PATH)
+@[end if]@
 
 macro(add_action_files)
   cmake_parse_arguments(ARG "NOINSTALL" "DIRECTORY" "FILES" ${ARGN})
@@ -23,6 +25,12 @@ macro(add_action_files)
     message(FATAL_ERROR "add_action_files() directory not found: ${CMAKE_CURRENT_SOURCE_DIR}/${ARG_DIRECTORY}")
   endif()
 
+  # if FILES are not passed search action files in the given directory
+  list(FIND ARGV "FILES" _index)
+  if(_index EQUAL -1)
+    file(GLOB ARG_FILES RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}/${ARG_DIRECTORY}" "${CMAKE_CURRENT_SOURCE_DIR}/${ARG_DIRECTORY}/*.action")
+    list(SORT ARG_FILES)
+  endif()
   _prepend_path(${CMAKE_CURRENT_SOURCE_DIR}/${ARG_DIRECTORY} "${ARG_FILES}" FILES_W_PATH)
 
   list(APPEND ${PROJECT_NAME}_ACTION_FILES ${FILES_W_PATH})
@@ -37,7 +45,7 @@ macro(add_action_files)
 
   foreach(actionfile ${FILES_W_PATH})
     get_filename_component(ACTION_SHORT_NAME ${actionfile} NAME_WE)
-    set(MESSAGE_DIR ${CATKIN_BUILD_PREFIX}/share/${PROJECT_NAME}/msg)
+    set(MESSAGE_DIR ${CATKIN_DEVEL_PREFIX}/share/${PROJECT_NAME}/msg)
     set(OUTPUT_FILES
       ${ACTION_SHORT_NAME}Action.msg
       ${ACTION_SHORT_NAME}ActionGoal.msg
