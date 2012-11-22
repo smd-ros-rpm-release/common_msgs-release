@@ -13,13 +13,18 @@ add_message_files(
   CameraInfo.msg
   ChannelFloat32.msg
   CompressedImage.msg
+  FluidPressure.msg
+  Illuminance.msg
   Image.msg
   Imu.msg
   JointState.msg
   Joy.msg
   JoyFeedback.msg
   JoyFeedbackArray.msg
+  LaserEcho.msg
   LaserScan.msg
+  MagneticField.msg
+  MultiEchoLaserScan.msg
   NavSatFix.msg
   NavSatStatus.msg
   PointCloud.msg
@@ -27,6 +32,8 @@ add_message_files(
   PointField.msg
   Range.msg
   RegionOfInterest.msg
+  RelativeHumidity.msg
+  Temperature.msg
   TimeReference.msg)
 
 add_service_files(
