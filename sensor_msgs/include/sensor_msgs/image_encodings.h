@@ -95,8 +95,6 @@ namespace sensor_msgs
     const std::string BAYER_GRBG16="bayer_grbg16";
 
     // Miscellaneous
-    // This is the UYVY version of YUV422 codec http://www.fourcc.org/yuv.php#UYVY
-    // with an 8-bit depth
     const std::string YUV422="yuv422";
 
     // Utility functions for inspecting an encoding string
@@ -172,9 +170,6 @@ namespace sensor_msgs
 
 #undef CHECK_CHANNELS
 
-      if (encoding == YUV422)
-        return 2;
-
       throw std::runtime_error("Unknown encoding " + encoding);
       return -1;
     }
@@ -223,9 +218,6 @@ namespace sensor_msgs
       CHECK_BIT_DEPTH(64, F);
 
 #undef CHECK_BIT_DEPTH
-
-      if (encoding == YUV422)
-        return 8;
 
       throw std::runtime_error("Unknown encoding " + encoding);
       return -1;
