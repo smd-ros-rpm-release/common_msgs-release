@@ -1,35 +1,23 @@
-cmake_minimum_required(VERSION 2.8.3)
 project(geometry_msgs)
-
-find_package(catkin REQUIRED COMPONENTS message_generation std_msgs)
 
 add_message_files(
   DIRECTORY msg
   FILES
-  Point.msg
-  Point32.msg
-  PointStamped.msg
-  Polygon.msg
-  PolygonStamped.msg
-  Pose2D.msg
-  Pose.msg
-  PoseArray.msg
-  PoseStamped.msg
-  PoseWithCovariance.msg
-  PoseWithCovarianceStamped.msg
+  Point32.msg QuaternionStamped.msg
+  Point.msg Transform.msg
+  PointStamped.msg TransformStamped.msg
+  Polygon.msg Twist.msg
+  PolygonStamped.msg TwistStamped.msg
+  Pose2D.msg TwistWithCovariance.msg
+  PoseArray.msg TwistWithCovarianceStamped.msg
+  Pose.msg Vector3.msg
+  PoseStamped.msg Vector3Stamped.msg
+  PoseWithCovariance.msg Wrench.msg
+  PoseWithCovarianceStamped.msg WrenchStamped.msg
   Quaternion.msg
-  QuaternionStamped.msg
-  Transform.msg
-  TransformStamped.msg
-  Twist.msg
-  TwistStamped.msg
-  TwistWithCovariance.msg
-  TwistWithCovarianceStamped.msg
-  Vector3.msg
-  Vector3Stamped.msg
-  Wrench.msg
-  WrenchStamped.msg)
+  )
 
 generate_messages(DEPENDENCIES std_msgs)
 
-catkin_package(CATKIN_DEPENDS message_runtime std_msgs)
+catkin_project(geometry_msgs
+  )
