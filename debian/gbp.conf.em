@@ -1,3 +1,3 @@
 [git-buildpackage]
-upstream-branch=release/nav_msgs/1.9.14
+upstream-branch=@(release_tag)
 upstream-tree=branch
