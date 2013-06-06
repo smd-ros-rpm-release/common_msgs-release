@@ -1,7 +1,7 @@
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 2.8.3)
 project(nav_msgs)
-find_package(catkin REQUIRED COMPONENTS genmsg geometry_msgs std_msgs)
-catkin_package()
+
+find_package(catkin REQUIRED COMPONENTS geometry_msgs message_generation std_msgs actionlib_msgs)
 
 add_message_files(
   DIRECTORY msg
@@ -18,4 +18,10 @@ add_service_files(
   GetMap.srv
   GetPlan.srv)
 
-generate_messages(DEPENDENCIES geometry_msgs std_msgs)
+add_action_files(
+  FILES
+  GetMap.action)
+
+generate_messages(DEPENDENCIES geometry_msgs std_msgs actionlib_msgs)
+
+catkin_package(CATKIN_DEPENDS geometry_msgs message_runtime std_msgs actionlib_msgs)
