@@ -96,6 +96,7 @@ namespace sensor_msgs
 
     // Miscellaneous
     // This is the UYVY version of YUV422 codec http://www.fourcc.org/yuv.php#UYVY
+    // with an 8-bit depth
     const std::string YUV422="yuv422";
 
     // Utility functions for inspecting an encoding string
@@ -104,7 +105,7 @@ namespace sensor_msgs
       return encoding == RGB8  || encoding == BGR8 ||
              encoding == RGBA8 || encoding == BGRA8 ||
              encoding == RGB16 || encoding == BGR16 ||
-             encoding == RGBA16 || encoding == BGRA16 || encoding == YUV422;
+             encoding == RGBA16 || encoding == BGRA16;
     }
 
     static inline bool isMono(const std::string& encoding)
@@ -172,7 +173,7 @@ namespace sensor_msgs
 #undef CHECK_CHANNELS
 
       if (encoding == YUV422)
-        return 3;
+        return 2;
 
       throw std::runtime_error("Unknown encoding " + encoding);
       return -1;
@@ -224,7 +225,7 @@ namespace sensor_msgs
 #undef CHECK_BIT_DEPTH
 
       if (encoding == YUV422)
-        return 16;
+        return 8;
 
       throw std::runtime_error("Unknown encoding " + encoding);
       return -1;
