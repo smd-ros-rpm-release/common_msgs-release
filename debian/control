@@ -1,0 +1,12 @@
+Source: ros-groovy-common-msgs
+Section: misc
+Priority: extra
+Maintainer: "Tully Foote <tfoote@osrfoundation.org>"
+Build-Depends: debhelper (>= 7.0.50~), ros-groovy-catkin
+Homepage: http://www.ros.org/wiki/common_msgs
+Standards-Version: 3.9.2
+
+Package: ros-groovy-common-msgs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-groovy-actionlib-msgs, ros-groovy-diagnostic-msgs, ros-groovy-geometry-msgs, ros-groovy-nav-msgs, ros-groovy-sensor-msgs, ros-groovy-shape-msgs, ros-groovy-stereo-msgs, ros-groovy-trajectory-msgs, ros-groovy-visualization-msgs
+Description: common_msgs contains messages that are widely used by other ROS packages. These includes messages for actions (actionlib_msgs), diagnostics (diagnostic_msgs), geometric primitives (geometry_msgs), robot navigation (nav_msgs), and common sensors (sensor_msgs), such as laser range finders, cameras, point clouds.
