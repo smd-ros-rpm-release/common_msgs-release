@@ -1,0 +1,12 @@
+Source: ros-hydro-nav-msgs
+Section: misc
+Priority: extra
+Maintainer: "Tully Foote <tfoote@osrfoundation.org>"
+Build-Depends: debhelper (>= 7.0.50~), ros-hydro-actionlib-msgs, ros-hydro-catkin, ros-hydro-geometry-msgs, ros-hydro-message-generation, ros-hydro-std-msgs
+Homepage: http://ros.org/wiki/nav_msgs
+Standards-Version: 3.9.2
+
+Package: ros-hydro-nav-msgs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-hydro-actionlib-msgs, ros-hydro-geometry-msgs, ros-hydro-message-runtime, ros-hydro-std-msgs
+Description: nav_msgs defines the common messages used to interact with the navigation stack.
