@@ -1,3 +1,32 @@
+## common_msgs - 1.9.17-0
+
+User `tfoote@BigFoote` released the packages in the `common_msgs` repository by running `/usr/bin/bloom-release common_msgs -t groovy -r groovy` on `Wed, 25 Sep 2013 22:11:45 -0000`
+
+These packages were released:
+- `actionlib_msgs`
+- `common_msgs`
+- `diagnostic_msgs`
+- `geometry_msgs`
+- `nav_msgs`
+- `sensor_msgs`
+- `shape_msgs`
+- `stereo_msgs`
+- `trajectory_msgs`
+- `visualization_msgs`
+
+Version of package(s) in repository `common_msgs`:
+- rosdistro version: `1.9.16-0`
+- old version: `1.9.16-0`
+- new version: `1.9.17-0`
+
+Versions of tools used:
+- bloom version: `0.4.4`
+- catkin_pkg version: `0.1.20`
+- rosdep version: `0.10.22`
+- rosdistro version: `0.2.14`
+- vcstools version: `0.1.31`
+
+
 ## common_msgs - 1.10.2-0
 
 User `tfoote@BigFoote` released the packages in the `common_msgs` repository by running `/usr/bin/bloom-release --rosdistro hydro --track hydro common_msgs` on `Mon, 19 Aug 2013 22:32:48 -0000`
