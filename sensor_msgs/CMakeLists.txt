@@ -27,6 +27,7 @@ add_message_files(
   LaserEcho.msg
   LaserScan.msg
   MagneticField.msg
+  MultiDOFJointState.msg
   MultiEchoLaserScan.msg
   NavSatFix.msg
   NavSatStatus.msg
