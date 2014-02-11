@@ -1,0 +1,12 @@
+Source: ros-indigo-trajectory-msgs
+Section: misc
+Priority: extra
+Maintainer: Tully Foote <tfoote@osrfoundation.org>
+Build-Depends: debhelper (>= 7.0.50~), ros-indigo-catkin, ros-indigo-geometry-msgs, ros-indigo-message-generation, ros-indigo-std-msgs
+Homepage: http://ros.org/wiki/trajectory_msgs
+Standards-Version: 3.9.2
+
+Package: ros-indigo-trajectory-msgs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-indigo-geometry-msgs, ros-indigo-message-runtime, ros-indigo-rosbag-migration-rule, ros-indigo-std-msgs
+Description: trajectory_msgs
