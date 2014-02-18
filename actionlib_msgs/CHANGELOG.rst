@@ -2,6 +2,11 @@
 Changelog for package actionlib_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.10.4 (2014-02-18)
+-------------------
+* remove catkin usage from CMake extra file (fix `#27 <https://github.com/ros/common_msgs/issues/27>`_)
+* Contributors: Dirk Thomas
+
 1.10.3 (2014-01-07)
 -------------------
 * python 3 compatibility
