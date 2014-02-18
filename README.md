@@ -1,3 +1,32 @@
+## common_msgs - 1.10.4-0
+
+User `tfoote@BigFoote` released the packages in the `common_msgs` repository by running `/usr/bin/bloom-release common_msgs --track hydro --rosdistro hydro` on `Tue, 18 Feb 2014 23:58:07 -0000`
+
+These packages were released:
+- `actionlib_msgs`
+- `common_msgs`
+- `diagnostic_msgs`
+- `geometry_msgs`
+- `nav_msgs`
+- `sensor_msgs`
+- `shape_msgs`
+- `stereo_msgs`
+- `trajectory_msgs`
+- `visualization_msgs`
+
+Version of package(s) in repository `common_msgs`:
+- rosdistro version: `1.10.3-0`
+- old version: `1.10.3-0`
+- new version: `1.10.4-0`
+
+Versions of tools used:
+- bloom version: `0.4.9`
+- catkin_pkg version: `0.1.25`
+- rosdep version: `0.10.25`
+- rosdistro version: `0.3.3`
+- vcstools version: `0.1.33`
+
+
 ## common_msgs - 1.10.3-0
 
 User `dthomas@drudge` released the packages in the `common_msgs` repository by running `/usr/bin/bloom-release -r indigo -t indigo common_msgs` on `Tue, 11 Feb 2014 19:33:36 -0000`
