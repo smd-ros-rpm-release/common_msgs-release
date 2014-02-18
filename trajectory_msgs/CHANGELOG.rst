@@ -2,6 +2,12 @@
 Changelog for package trajectory_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.10.4 (2014-02-18)
+-------------------
+* make link to control messages a real link
+* Add a description to trajectory_msgs
+* Contributors: Michael Ferguson
+
 1.10.3 (2014-01-07)
 -------------------
 
