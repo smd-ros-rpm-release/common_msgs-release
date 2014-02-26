@@ -1,3 +1,32 @@
+## common_msgs (groovy) - 1.9.19-0
+
+User `tfoote@BigFoote` released the packages in the `common_msgs` repository into the `groovy` distro by running `/usr/bin/bloom-release -t groovy -r groovy common_msgs` on `Wed, 26 Feb 2014 00:05:17 -0000`
+
+These packages were released:
+- `actionlib_msgs`
+- `common_msgs`
+- `diagnostic_msgs`
+- `geometry_msgs`
+- `nav_msgs`
+- `sensor_msgs`
+- `shape_msgs`
+- `stereo_msgs`
+- `trajectory_msgs`
+- `visualization_msgs`
+
+Version of package(s) in repository `common_msgs`:
+- rosdistro version: `1.9.18-0`
+- old version: `1.9.18-0`
+- new version: `1.9.19-0`
+
+Versions of tools used:
+- bloom version: `0.5.1`
+- catkin_pkg version: `0.1.26`
+- rosdep version: `0.10.25`
+- rosdistro version: `0.3.4`
+- vcstools version: `0.1.33`
+
+
 ## common_msgs (groovy) - 1.9.18-0
 
 User `tfoote@BigFoote` released the packages in the `common_msgs` repository into the `groovy` distro by running `/home/tfoote/work/bloomenv/bin/bloom-release common_msgs --rosdistro groovy --track groovy` on `Wed, 19 Feb 2014 00:09:01 -0000`
