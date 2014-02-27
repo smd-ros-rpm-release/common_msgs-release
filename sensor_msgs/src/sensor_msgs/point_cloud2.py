@@ -32,8 +32,6 @@
 # ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 
-from __future__ import print_function
-
 """
 Serialization of sensor_msgs.PointCloud2 messages.
 
@@ -89,9 +87,9 @@ def read_points(cloud, field_names=None, skip_nans=False, uvs=[]):
                 if not has_nan:
                     yield p
         else:
-            for v in range(height):
+            for v in xrange(height):
                 offset = row_step * v
-                for u in range(width):
+                for u in xrange(width):
                     p = unpack_from(data, offset)
                     has_nan = False
                     for pv in p:
@@ -106,9 +104,9 @@ def read_points(cloud, field_names=None, skip_nans=False, uvs=[]):
             for u, v in uvs:
                 yield unpack_from(data, (row_step * v) + (point_step * u))
         else:
-            for v in range(height):
+            for v in xrange(height):
                 offset = row_step * v
-                for u in range(width):
+                for u in xrange(width):
                     yield unpack_from(data, offset)
                     offset += point_step
 
@@ -173,7 +171,7 @@ def _get_struct_fmt(is_bigendian, fields, field_names=None):
             fmt += 'x' * (field.offset - offset)
             offset = field.offset
         if field.datatype not in _DATATYPES:
-            print('Skipping unknown PointField datatype [%d]' % field.datatype, file=sys.stderr)
+            print >> sys.stderr, 'Skipping unknown PointField datatype [%d]' % field.datatype
         else:
             datatype_fmt, datatype_length = _DATATYPES[field.datatype]
             fmt    += field.count * datatype_fmt
