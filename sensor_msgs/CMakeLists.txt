@@ -27,6 +27,7 @@ add_message_files(
   LaserEcho.msg
   LaserScan.msg
   MagneticField.msg
+  MultiDOFJointState.msg
   MultiEchoLaserScan.msg
   NavSatFix.msg
   NavSatStatus.msg
@@ -53,3 +54,7 @@ catkin_package(
 install(DIRECTORY include/${PROJECT_NAME}/
   DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
   FILES_MATCHING PATTERN "*.h")
+
+if (CATKIN_ENABLE_TESTING)
+  add_subdirectory(test)
+endif()
