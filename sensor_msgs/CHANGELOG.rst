@@ -2,6 +2,22 @@
 Changelog for package sensor_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.11.0 (2014-03-04)
+-------------------
+* add a PointCloud2 iterator and modifier
+* Contributors: Tully Foote, Vincent Rabaud
+
+1.10.6 (2014-02-27)
+-------------------
+
+1.10.5 (2014-02-25)
+-------------------
+
+1.10.4 (2014-02-18)
+-------------------
+* Fix roslib import for message module, remove roslib.load_manifest
+* Contributors: Bence Magyar
+
 1.10.3 (2014-01-07)
 -------------------
 * python 3 compatibility
