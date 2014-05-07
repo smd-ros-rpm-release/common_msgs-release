@@ -2,6 +2,11 @@
 Changelog for package diagnostic_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.11.3 (2014-05-07)
+-------------------
+* Export architecture_independent flag in package.xml
+* Contributors: Scott K Logan
+
 1.11.2 (2014-04-24)
 -------------------
 * Add STALE to DiagnosticStatus level enum
