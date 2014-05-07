@@ -1,6 +1,6 @@
 <package>
   <name>trajectory_msgs</name>
-  <version>1.11.2</version>
+  <version>1.11.3</version>
   <description>
     This package defines messages for defining robot trajectories. These messages are
     also the building blocks of most of the
@@ -25,6 +25,7 @@
 
   <export>
     <rosbag_migration_rule rule_file="rules/JointTrajectoryPoint_Groovy2Hydro_08.10.2013.bmr" />
+    <architecture_independent/>
   </export>
 
 </package>
