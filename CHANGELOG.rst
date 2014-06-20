@@ -2,6 +2,9 @@
 Changelog for package trajectory_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.11.4 (2014-06-19)
+-------------------
+
 1.11.3 (2014-05-07)
 -------------------
 * Export architecture_independent flag in package.xml
