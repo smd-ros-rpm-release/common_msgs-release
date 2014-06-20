@@ -1,3 +1,32 @@
+## common_msgs (indigo) - 1.11.4-0
+
+The packages in the `common_msgs` repository were released into the `indigo` distro by running `/usr/bin/bloom-release common_msgs -t indigo -r indigo` on `Fri, 20 Jun 2014 00:03:33 -0000`
+
+These packages were released:
+- `actionlib_msgs`
+- `common_msgs`
+- `diagnostic_msgs`
+- `geometry_msgs`
+- `nav_msgs`
+- `sensor_msgs`
+- `shape_msgs`
+- `stereo_msgs`
+- `trajectory_msgs`
+- `visualization_msgs`
+
+Version of package(s) in repository `common_msgs`:
+- rosdistro version: `1.11.3-1`
+- old version: `1.11.3-1`
+- new version: `1.11.4-0`
+
+Versions of tools used:
+- bloom version: `0.5.10`
+- catkin_pkg version: `0.2.2`
+- rosdep version: `0.10.27`
+- rosdistro version: `0.3.5`
+- vcstools version: `0.1.35`
+
+
 ## common_msgs (indigo) - 1.11.3-1
 
 The packages in the `common_msgs` repository were released into the `indigo` distro by running `/usr/bin/bloom-release common_msgs -t indigo -r indigo` on `Wed, 21 May 2014 01:59:51 -0000`
