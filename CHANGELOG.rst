@@ -2,6 +2,11 @@
 Changelog for package sensor_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.11.6 (2014-11-04)
+-------------------
+* Fix compilation with Clang
+* Contributors: jmtatsch
+
 1.11.5 (2014-10-27)
 -------------------
 * add a test for the operator+ fix
